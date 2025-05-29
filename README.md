@@ -57,12 +57,3 @@ Os algoritmos foram implementados nas linguagens **C** e **Python** para fins co
 - Utilização da biblioteca `threading` em Python para paralelismo.
 
 ---
-
-## Como Rodar o Projeto
-
-### Em Python
-
-1. Clone o repositório:
-   ```bash
-   git clone <url-do-repositorio>
-   cd <nome-do-repositorio>
