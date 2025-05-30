@@ -1,59 +1,97 @@
-# Projeto de Algoritmos de Escalonamento - Sistemas Operacionais
+/* 
+============================================
+  SISTEMAS OPERACIONAIS - PROJETO
+============================================
 
-## Equipe
-- Evilyn Pimenta de Sousa  
-- João Pedro Lima Leite Neto  
-- Sérgio Silva de Oliveira  
-- João Antonio da Silva Satiro  
-- Guilherme Oliveira Camilo  
+Equipe:
+- Evilyn Pimenta de Sousa
+- Guilherme Oliveira Camilo
+- João Antonio da Silva Satiro
+- João Pedro Lima Leite Neto
+- Sérgio Silva de Oliveira
 
----
+============================================
+ÍNDICE
+1. Objetivo do projeto
+2. Algoritmo de Escalonamento Base
+3. Algoritmo de Escalonamento Adicional (Sistemas Interativos)
+4. Simulações com Conjunto de Requisições Aleatórias
+5. Escalonamento com Threads
+============================================
+*/
 
-## Descrição do Projeto
+/* 
+============================================
+1. OBJETIVO
+============================================
+Implementar e analisar diferentes algoritmos de escalonamento de processos 
+em sistemas operacionais, com foco no:
 
-Este projeto tem como objetivo a implementação, simulação e análise de algoritmos de escalonamento de processos em sistemas operacionais, com foco em algoritmos clássicos e sistemas interativos.
+- Shortest Job First (SJF) como algoritmo base.
+- Round Robin (RR) ou First Come First Served (FCFS) como algoritmos adicionais 
+  para sistemas interativos.
+*/
 
-### Algoritmos Implementados:
-- **Shortest Job First (SJF)** (Algoritmo base)
-- **Round Robin (RR)** (Algoritmo para sistemas interativos)
+/* 
+============================================
+2. ALGORITMO DE ESCALONAMENTO BASE - SJF
+============================================
+- Algoritmo não preemptivo.
+- Seleciona o processo com menor tempo de execução (burst time).
+- Calcula:
+    * Tempo de espera (waiting time).
+    * Tempo de retorno (turnaround time).
+- Minimiza o tempo médio de espera, priorizando processos mais curtos.
 
-Os algoritmos foram implementados nas linguagens **C** e **Python** para fins comparativos.
+Tecnologias:
+- Linguagem C (uso de structs e arrays).
+- Linguagem Python (uso de classes e listas).
+*/
 
----
-
-## Estrutura do Projeto
-
-### 1. Implementação do algoritmo SJF (Shortest Job First)
-
-- Algoritmo não-preemptivo que seleciona o processo com menor tempo de execução (burst time) para rodar primeiro.
-- Calcula tempo de espera (waiting time) e tempo de turnaround (turnaround time) para cada processo.
-- Minimiza o tempo médio de espera, privilegiando processos mais curtos.
-
-**Tecnologias:**  
-- Linguagem C (uso de structs e arrays)  
-- Linguagem Python (uso de classes e listas)
-
-### 2. Implementação do algoritmo Round Robin (RR)
-
+/*
+============================================
+3. ALGORITMO DE ESCALONAMENTO ADICIONAL - RR
+============================================
 - Algoritmo preemptivo para sistemas interativos.
-- Cada processo recebe uma fatia de tempo fixa (quantum) para execução antes de ser interrompido e reprogramado.
-- Garante justiça e responsividade para processos.
+- Cada processo recebe uma fatia de tempo fixa (quantum).
+- Garante:
+    * Justiça na distribuição do tempo.
+    * Responsividade para os processos.
 
-**Tecnologias:**  
-- Linguagem C  
-- Linguagem Python
+Tecnologias:
+- Linguagem C.
+- Linguagem Python.
+*/
 
-### 3. Simulações com conjuntos de requisições aleatórias
+/*
+============================================
+4. SIMULAÇÕES COM CONJUNTO DE REQUISIÇÕES ALEATÓRIAS
+============================================
+- Geração de processos com burst times aleatórios.
+- Comparação entre SJF e RR com os mesmos processos.
+- Métricas avaliadas:
+    * Tempo médio e máximo de espera.
+    * Tempo médio e máximo de turnaround.
+*/
 
-- Geração de processos com burst times aleatórios para testes e análise.
-- Comparação dos algoritmos SJF e RR usando os mesmos processos para avaliação justa.
-- Métricas calculadas:
-  - Tempo médio e máximo de espera
-  - Tempo médio e máximo de turnaround
+/*
+============================================
+5. ESCALONAMENTO COM THREADS
+============================================
+- Simulações utilizando múltiplas threads: 2, 4 e 6 threads.
+- Objetivo: avaliar o desempenho concorrente.
+- Utilização de:
+    * Biblioteca threading (em Python).
+    * Biblioteca ExecutorService (em Java/C++ opcionalmente).
+*/
 
-### 4. Implementação de multithreading
+/*
+============================================
+CÓDIGOS IMPLEMENTADOS EM:
+- C
+- Python
 
-- Execução das simulações utilizando 2, 4 e 6 threads para avaliar desempenho concorrente.
-- Utilização da biblioteca `threading` em Python para paralelismo.
-
----
+Repositório:
+https://github.com/SergioSilva12/escalonamento-processos
+============================================
+*/
